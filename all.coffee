@@ -6,21 +6,24 @@
 # 3. the user will be redirected to WDW
 _ = require 'underscore'
 Q = require 'q'
-phantom = require 'phantom'
+phantom = require 'node-phantom'
 
-phantom.create (ph) ->
-  ph.createPage (page) ->
-    page.open "http://www.welldressedwolf.com/", (status) ->
+phantom.create (err, ph) ->
+  console.log 1, err, ph.createPage.toString()
+  ph.createPage (err, page) ->
+    console.log 2
+    page.open "http://www.welldressedwolf.com/", (err, status) ->
+      console.log 3
       if status is "fail"
         console.log "failed to load welldressedwolf. exiting."
         ph.exit()
       console.log "Ready to begin\n=============="
-      page.evaluate () ->
-        console.log document.title
-        document.title
+      # page.evaluate () ->
+      #   console.log document.title
+      #   document.title
       # getAllProductUrls page
       ph.exit()
-, { dnodeOpts: { weak: false } }
+#, { dnodeOpts: { weak: false } }
 
 
 
