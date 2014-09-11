@@ -1,0 +1,53 @@
+body {
+  min-width: 357px;
+  overflow-x: hidden;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+}
+
+
+/* Dress Thumbnails */
+ul#dress-thumbs li {
+  margin:2px;
+  float:left;
+}
+
+ul#dress-thumbs li img {
+  max-height: 100px;    
+}
+
+/* Fullsize dresses */
+ul#dresses {
+  width: 100%;
+}
+
+
+ul#dresses li {
+  margin:2px;
+  float:left;
+  width: 100%;
+}
+
+ul#dresses li img {
+  width:100%;
+}
+
+
+
+img.open-wdw {
+  width:219px;
+  height:124px;
+  cursor: pointer;
+}

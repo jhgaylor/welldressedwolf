@@ -2,9 +2,6 @@
 var QUANTITY = 2;
 var SIZE = "12M";
 
-// actuually order the stuff.
-order_dresses(QUANTITY, SIZE, null);
-
 // needs to be called on a product page
 // http://www.welldressedwolf.com/products/copy
 function order_dresses(quantity, size, url) {
@@ -23,4 +20,22 @@ function order_dresses(quantity, size, url) {
   $form.submit();
 }
 
+$body = $('body');
+$document = $(document);
 
+$HTML = $([
+  "<div class='wdw-order-dresses'>",
+    "<h1>Order Now</h1>",
+  "</div>"
+].join(""));
+
+if(location.href.search("products/") >= 0){
+  
+  $HTML.appendTo($body);
+
+  $document.on('click', '.wdw-order-dresses', function () {
+    // actuually order the stuff.
+    console.log("clicked");
+    order_dresses(QUANTITY, SIZE, null);
+  });
+}

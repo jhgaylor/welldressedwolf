@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "WDW",
+  "description": "Get your dresses!",
+  "version": "0.1",
+
+  "permissions": [
+    "http://www.welldressedwolf.com/"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "wdw.html"
+  },
+  "background": {
+    "scripts": ["jquery-1.11.1.min.js"]
+  },
+  "content_scripts": [ {
+    "js": [ "jquery-1.11.1.min.js", "wdw_content_script.js" ],
+    "css": [ "wdw_content_script.css" ],
+    "matches": [ "http://*.welldressedwolf.com/*", "https://*.welldressedwolf.com/*"]
+  }]
+}
