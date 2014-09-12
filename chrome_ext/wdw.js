@@ -29,7 +29,8 @@ $(document).ready(function () {
   var refresh_time = 2; //seconds
   var loader = setInterval(loadDresses, refresh_time*1000);
 
-  var number_of_refreshes = 30;
+  // run for 10 minutes w/ refresh_time 2
+  var number_of_refreshes = 300;
   setTimeout(function () {
     clearInterval(loader);
   }, refresh_time*1000*number_of_refreshes);
