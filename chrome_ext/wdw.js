@@ -26,11 +26,11 @@ $(document).ready(function () {
   $(document).on('click', '.dress .order', orderDress);
 
 
-  var refresh_time = 2; //seconds
+  var refresh_time = .5; //seconds
   var loader = setInterval(loadDresses, refresh_time*1000);
 
   // run for 10 minutes w/ refresh_time 2
-  var number_of_refreshes = 300;
+  var number_of_refreshes = 600;
   setTimeout(function () {
     clearInterval(loader);
   }, refresh_time*1000*number_of_refreshes);
