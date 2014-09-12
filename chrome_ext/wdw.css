@@ -2,10 +2,40 @@ body {
   min-width: 357px;
   overflow-x: hidden;
 }
-
+.clearfix {
+  clear:both;
+}
 .logo-container {
   text-align: center;
 }
+
+.options-container {
+  width:100%;
+}
+
+.options-container ul.options {
+  width:100%; 
+}
+
+.options-container ul.options li.option {
+  float:left;
+  width:24%;
+  margin: 3%;
+}
+
+.options-container ul.options li.option p{
+  margin-bottom: 0px;
+  text-align: center;
+  padding-left:5px;
+}
+
+.options-container ul.options li.option input{
+  padding:5px;
+  height:20px;
+  width:100%;
+  text-align: center;
+}
+
 
 ul {
   list-style-type: none;
@@ -14,7 +44,6 @@ ul {
 }
 
 li {
-  cursor: pointer;
 }
 
 
@@ -22,6 +51,7 @@ li {
 ul#dress-thumbs li {
   margin:2px;
   float:left;
+  cursor: pointer;
 }
 
 ul#dress-thumbs li img {
@@ -38,6 +68,7 @@ ul#dresses li {
   margin:2px;
   float:left;
   width: 100%;
+  cursor: pointer;
 }
 
 ul#dresses li img {

@@ -1,6 +1,14 @@
 // Some values to configure
-var QUANTITY = 2;
-var SIZE = "12M";
+var QUANTITY = parseInt(localStorage.getItem('wdw-quantity')) || 2;
+var SIZE = localStorage.getItem('wdw-size') || "12M";
+
+if(! localStorage.getItem('wdw-quantity')) {
+  localStorage.setItem('wdw-quantity', 2)
+}
+
+if(! localStorage.getItem('wdw-size')) {
+  localStorage.setItem('wdw-size', "12M")
+}
 
 // needs to be called on a product page
 // http://www.welldressedwolf.com/products/copy
@@ -26,6 +34,10 @@ $document = $(document);
 $HTML = $([
   "<div class='wdw-order-dresses'>",
     "<h1>Order Now</h1>",
+    "<div class='right'>",
+      "<span id='wdw-default-size-label'> Size</span> <input type='text' id='wdw-default-size'>",
+      "<span id='wdw-default-quantity-label'> Quantity</span> <input type='number' id='wdw-default-quantity'>",
+    "</div>",
   "</div>"
 ].join(""));
 
@@ -33,7 +45,7 @@ if(location.href.search("products/") >= 0){
   
   $HTML.appendTo($body);
 
-  $document.on('click', '.wdw-order-dresses', function () {
+  $document.on('click', '.wdw-order-dresses h1', function () {
     // actuually order the stuff.
     console.log("clicked");
     order_dresses(QUANTITY, SIZE, null);

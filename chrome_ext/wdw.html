@@ -3,16 +3,33 @@
   <head>
     <title>Getting Started Extension's Popup</title>
     <link rel="stylesheet" type="text/css" href="wdw.css">
-
+    
     <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
     <script src="wdw.js"></script>
   </head>
   <body>
-    <p class="logo-container">
+    <div class="logo-container">
       <img src="wdw_logo.png" class="open-wdw">
-    </p>
+    </div>
 
-    <ul id="dress-thumbs">
+    <div class="options-container">
+      <ul class="options">
+        <li class="option">
+          <p>Quantity</p>
+          <input type="number" id="wdw-default-quantity">
+        </li>
+        <li class="option">
+          <p>Size</p>
+          <input type="text" id="wdw-default-size">
+        </li>
+        <li class="option">
+          <p>Refresh</p>
+          <input type="number" id="wdw-default-refresh">
+        </li>
+      </ul>
+    </div>
+
+    <ul id="dress-thumbs" class="clearfix">
       <li class="dress">Loading...</li>
     </ul>
 
