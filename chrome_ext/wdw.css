@@ -1,5 +1,5 @@
 body {
-  min-width: 357px;
+  min-width: 360px;
   overflow-x: hidden;
 }
 .clearfix {
@@ -19,7 +19,7 @@ body {
 
 .options-container ul.options li.option {
   float:left;
-  width:24%;
+  width:41%;
   margin: 3%;
 }
 
@@ -33,6 +33,13 @@ body {
   padding:5px;
   height:20px;
   width:100%;
+  text-align: center;
+}
+
+.options-container ul.options li.option select{
+  padding:5px;
+  height:34px;
+  width:110%;
   text-align: center;
 }
 
@@ -81,4 +88,18 @@ img.open-wdw {
   width:219px;
   height:124px;
   cursor: pointer;
+}
+
+.dress .order {
+  background-color:black;
+  color: white;
+  text-align: center;
+  padding:10px;
+  margin-top:-5px;
+  font-size: 120%;
+}
+
+#dresses .dress .order {
+  padding: 20px 10px;
+  font-size: 160%;
 }

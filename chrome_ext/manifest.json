@@ -14,10 +14,5 @@
   },
   "background": {
     "scripts": ["jquery-1.11.1.min.js"]
-  },
-  "content_scripts": [ {
-    "js": [ "jquery-1.11.1.min.js", "wdw_content_script.js" ],
-    "css": [ "wdw_content_script.css" ],
-    "matches": [ "http://*.welldressedwolf.com/*", "https://*.welldressedwolf.com/*"]
-  }]
+  }
 }
